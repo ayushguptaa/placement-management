@@ -1,0 +1,18 @@
+extends layout
+head
+  title My site
+  script(src="../public/stylesheets/style.css")
+block content
+  h1= title
+  p Welcome to #{title}
+  #content
+    #logo
+      img(src="http://www.manit.ac.in/sites/default/files/Slide1_0.jpg", alt="", srcset="",width="90%",height="300px")
+      h2 Welcome to NIT BHOPAL
+    #login
+      p Login as:
+      br 
+      each val in login_options
+        button #{val.login_type}
+        br
+        br
